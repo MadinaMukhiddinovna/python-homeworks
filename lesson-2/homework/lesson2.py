@@ -1,8 +1,4 @@
 
-
-#--------------------------------------------------------------
-
-
 # Homework Exercises
 # 1. Age Calculator
 # Write a Python program to ask for a user's 
