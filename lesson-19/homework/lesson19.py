@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Load the sales data
-sales_df = pd.read_csv('C:\Users\user\Downloads\sales_data.csv')
+sales_df = pd.read_csv('C:\\Users\\user\\Downloads\\sales_data.csv')
 
 # 1. Group by Category and calculate:
 category_stats = sales_df.groupby('Category').agg({
@@ -24,7 +24,7 @@ highest_sales_date = daily_sales.sort_values('Total_Sale', ascending=False).head
 
 
 # Load the customer orders data
-orders_df = pd.read_csv('C:\Users\user\Downloads\customer_orders.csv')
+orders_df = pd.read_csv('C:\\Users\user\\Downloads\\customer_orders.csv')
 
 # 1. Group by CustomerID and filter customers with 20+ orders
 orders_per_customer = orders_df.groupby('CustomerID')['OrderID'].count().reset_index(name='Order_Count')
@@ -46,12 +46,12 @@ import pandas as pd
 import sqlite3
 
 # Connect to SQLite database and read population table
-conn = sqlite3.connect('C:\Users\user\Downloads\population.db')
+conn = sqlite3.connect('C:\\Users\\user\\Downloads\\population.db')
 population_df = pd.read_sql_query("SELECT * FROM population", conn)
 conn.close()
 
 # Load salary bands from Excel
-bands_df = pd.read_excel("C:\Users\user\Downloads\population_salary_analysis (1).xlsx")
+bands_df = pd.read_excel("C:\\Users\\user\\Downloads\\population_salary_analysis (1).xlsx")
 
 # Assume bands_df has columns: 'Band', 'Min_Salary', 'Max_Salary'
 
